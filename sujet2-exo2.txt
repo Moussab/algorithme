@@ -1,0 +1,28 @@
+struct maillion {
+    int val
+    maillion * suivant
+    maillion * tete
+}
+
+
+fonction inserer ( maillion * list , int position , int valeur )
+{
+    maillion *x = get_position( list , position)// retourne le maillion i apartir de la liste
+    maillion *y = creer_maillion()
+    y->val = valeur
+    y-> suivant = x->suivant
+    y->tete = list
+    x->suivant = y
+
+}
+
+
+fonction get_position( maillion * list , int position) : maillion *
+{
+    int i = 0 ;
+    maillion *x x= list
+    tant que i < position et x != NULL
+        x= x->suivant
+        i++
+    retourner x 
+}

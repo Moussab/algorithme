@@ -1,0 +1,20 @@
+structure noeud :
+{
+	int valeur , 
+	ptr pere , fils gauche , fils droit 
+}
+
+
+fonction insertion( noeud *arbre , valeur )
+{
+	noeud  *emplacement = recherche_binaire(arbre,valeur)  
+		// la valeur serra le fils guache 
+	noeud * noeud = creer_noeud()
+	noeud->val = valeur 
+	noeud->pere = emplacement 
+	si emplacement->val > valeur alors
+		emplacement->fg = noeud
+	sinon 
+		emplacement -> fd = noeud
+
+}

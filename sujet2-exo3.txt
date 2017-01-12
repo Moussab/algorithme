@@ -1,0 +1,16 @@
+fonction prefix_suffix(char s[]): char s[]
+{
+	int taille = longueur(s) // en c strlen 
+	int l = taille /2 , 
+	int pos = taille -l 
+	char s1[]=substr(s,0,l)// substr une fonction qui reourne une souchaine comprise entre 0 et l 
+	char s2[]= substr(s,pos,l)
+	tant que s1 != s2 et l > 0 
+		pos = taille-l
+		s2 = substr(s, pos , l)
+		l = l-1 
+		si l == 0 alors 
+			retouner ""
+		s1 = substr(s,0,l)
+
+}

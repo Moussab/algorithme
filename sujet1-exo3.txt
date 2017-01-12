@@ -1,0 +1,21 @@
+fonction parcour vlr_pair(noeud * arbre)
+{	File f; 
+	creer_file(f)
+	int val
+	parcour_noeud(arbre,Vraie , f)
+	tanque non file_vide(f) faire
+		defiler(f,val)
+		afficher ( val)
+}
+
+parcour_noeud(noeud * noeud , bool paire , file f)
+{
+	si paire: 
+		afficher noeud->val 
+	sinon 
+		enfiler(f,noeud->val)
+	FSI 
+	parcour_noeud(noeud->fg, non paire, f)
+	parcour_noeud(noeud->fd, non paire , f)
+
+}

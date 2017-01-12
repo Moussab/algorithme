@@ -1,0 +1,39 @@
+fontion min1(int T[], int taille ,int  min  ) : int
+{	int j = 0 // trouver le minimum d'un tableau on ignorant les valeurs inferieurs a min 
+	tantque T[j] <= min :  // initialisation 
+		j++
+	int val = T[j] 
+
+	tant que j < taille  
+		si T [j] > min et T[j] < val alors 
+			val = T[j]
+		j++
+
+retourner val 
+}
+
+
+fonction trouver_min(int T[] , int taille, int rang ) : int 
+{	si rang > taille alors 
+		erreur 
+	int n = 0; 
+	int val = T[0]
+	pour j = 0 jusqu'a taille , j++ faire //trouver le min 
+		si T[j] < val alors 
+			val = T[j]
+
+	pour j = 0 jusqu'a taille 
+		si T[j] == val alors 
+			n++ 
+			si n == rang alors : 
+				retourner val 
+
+	tantque n < rang faire 
+		min1(T,taille , val)
+		pour j = 0 jusqu'a taille 
+		si T[j] == val alors 
+			n++ 
+			si n == rang alors : 
+				retourner val 
+
+}

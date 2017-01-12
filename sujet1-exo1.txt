@@ -1,0 +1,62 @@
+fonction somme (int T[] ,int debut ,int longueur) : 
+	// calculer la somme de la sous sequence d'un tableau 
+	// T : le tableau 1
+	// debut le debut de la sequence 
+	// longueur : sa longuur 
+
+	int s= 0 
+	pour i allant de debut a debut + longueur :
+		s = s + T[i]
+
+	retourner s 
+
+
+fonction seq_max(in int T[] ,in int longueur,out int indice , out int seq_len ,out int somme  ) :
+	// trouver la sous sequnece maximale de la somme maximale 
+int indice = 0 
+int longuere = 1
+int somme = T[0] // le cas trivial  
+
+pour len=1 jusqua longueur ,len++ // la taille de la sous sequence 
+	pour i = 0 jusqua longueur - len // l'indice du depart de la sous sequence 
+	somme1 = somme ( T,i,len)
+	si somme1 >= somme alors // on a trouver une sous sequence d'une somme ou une taille plus grande de la derniere enrgistrer 
+		somme = somme1 
+		indice = i 
+		longuer = len 
+
+
+
+fonction seq_max2 ()
+	int somme = 0 
+	int indice = 0
+	int longueure = 0 
+	bool continue = vrai
+	int nombre
+	int i = 0
+	int indice_neg=-1
+	int somme_neg=0
+
+	tanque continue: 
+	lire(nombre)
+	i++  
+		si erreur : alors :
+			continue = faux 
+			fin //exit 0 
+	is nombre < 0 alors :
+		is somme_neg != 0 alors : 
+			somme_neg+= nombre 
+		sinon  
+			indice_neg = i // l'indice du premer nombre negative 
+			somme_neg = indice
+	sinon 
+		si somme_neg+num > 0+ nombre alors 
+			 // la sequence adment une augmentation  
+			somme = somme + somme_neg + nombre
+			longueur = longueur + i-indice + 1 
+		sinon  si somme_neg + s < 0 : // il faut commencer avec une nouvelle sequence  
+			somme = nombre 
+			indice = i 
+			len = 0	
+		sinon somme_neg = somme_neg + num 
+
